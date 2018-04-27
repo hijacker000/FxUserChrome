@@ -1,0 +1,64 @@
+@-moz-document url("about:newtab") {
+
+/*這是改about:newtab*/
+body{
+background-color: #111111!important;/*#323234*/
+/*color: white !important;*/
+}
+
+/*熱門網站整體長寬*/
+.outer-wrapper main {
+  width: 1150px !important;
+  padding-top: 100px;
+  padding-bottom: 0px !important;
+}
+
+/*不要顯示縮圖*/
+.top-sites-list .top-site-outer .tile {/*這是tile*/
+	display: none !important;
+}
+/*右上設定圖示*/
+.prefs-pane-button button {
+    fill: whitesmoke !important;
+}
+
+/*左上"熱門網站"字體顏色*/
+.section-title span{
+color: whitesmoke !important;
+fill: whitesmoke !important;
+}
+
+.edit-topsites-wrapper .edit-topsites-button button {
+color: whitesmoke !important;
+}
+
+/*單一熱門網站長寬*/
+.top-sites-list .top-site-outer .title {/*這是title*/
+    height: 80px !important;/*包括間隔*/
+    width: 200px !important;
+}
+/*單一熱門網站的字*/
+.top-sites-list .top-site-outer .title span {
+	height: 60px !important;
+    background-color: #707070!important;
+	font-size: 210%;
+	text-overflow: clip !important;
+	text-shadow: 1px 1px 0.3px #111111 !important;
+    border-radius: 5px;
+    border-bottom: #FF9900 8px solid !important;/*橘色*/
+	padding: 12px !important;/*控制文字在中間*/
+}
+
+/*單一熱門網站的字hover*/
+.top-sites-list .top-site-outer .title span:hover{
+background-color: #505050 !important;
+color: #cccccc !important;
+}
+/*icon不要顯示*/
+.top-sites-list .top-site-outer .default-icon {display: none !important;}
+/*字首不要顯示*/
+.letter-fallback {display: none !important;}
+/*不顯示縮圖*/	
+.activity-stream-thumbnail {display:none !important;}
+
+}

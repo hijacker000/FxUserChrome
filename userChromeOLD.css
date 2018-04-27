@@ -1,0 +1,232 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/*改address bar的下拉清單字體*/                 
+/* Suggestion Page Title */
+.autocomplete-richlistitem .ac-title
+{ font-size: 20px !important; /* default is 14px */
+                   }
+/* Suggestion Page URL */
+.autocomplete-richlistitem .ac-url
+{ font-size: 20px !important; /* default is 12px */
+}             
+
+/*移除網址列上的zoom indicator*/
+#urlbar-zoom-button {display:none!important}
+
+.tab-icon-image{/*隱藏tab上面的圖示*/
+    display: none !important; }       
+
+/*#helpMenu {
+font-size: 20pt !important
+}*/
+
+/* Make Inactive Tabs Transparent */
+/*.tabbrowser-tabs tab:not([selected="true"])
+{background-image: white !important; opacity:0.5;}*/
+
+/*
+toolbarspring{
+  min-height: 30px;
+}
+
+window{
+text-shadow:0.2px 0.2px 0px #777777 !important;
+}
+
+
+#TabsToolbar{
+background-color:#202020  !important;
+color: #ffffff !important;    
+}
+                   
+#TabsToolbar .tabbrowser-tab[selected]{
+font-weight:bold;
+color: #660000  !important;
+}
+
+*/
+
+/*win10*/
+                   
+/*影響tab列底色,只有預設主題中有效*/                   
+#main-window {
+background-color: #222222 !important; 
+}                 
+
+/*menu顏色*/
+#bookmarks-view,#historyTree,#history-panel,#sidebar-header {
+    background-color: #cccccc!important; 
+}                   
+menuitem, menu{
+    background-color: #cccccc !important;
+}
+menuseparator {
+    background-color: black !important;
+}
+menupopup {
+    background-color: #cccccc !important; 
+}
+menupopup > menu:hover {
+    background-color: #aaaaaa !important;
+}
+menuitem:hover {
+    background-color: #aaaaaa !important;
+}           
+                   
+
+                   
+/*影響tab列右方的Minimize/Maximize/Close button*/
+/*#titlebar-buttonbox .titlebar-button { 
+background-color: transparent !important;
+}*/
+             
+                   
+/*Close button*/
+#titlebar-close {
+    list-style-image: url(chrome://browser/skin/window-controls/close-themes.svg) !important;
+}             
+#titlebar-min {
+    list-style-image: url(chrome://browser/skin/window-controls/minimize-themes.svg) !important;
+}
+#titlebar-max {
+    list-style-image: url(chrome://browser/skin/window-controls/maximize-themes.svg) !important;
+}
+:root[sizemode="maximized"] #titlebar-max {
+    list-style-image: url(chrome://browser/skin/window-controls/restore-themes.svg) !important;
+}                                                 
+                   
+/*影響tab列右方的Min/Max button hover的顏色*/         
+#titlebar-buttonbox #titlebar-max:-moz-any(:hover,[open]), #titlebar-buttonbox #titlebar-min:-moz-any(:hover,[open]) {
+background-color: #888888 !important;
+} 
+                   
+/*影響tab列右方的close button hover的顏色*/
+#titlebar-buttonbox #titlebar-close:-moz-any(:hover,[open]) { 
+background-color: red !important; 
+}
+                   
+/*網址列周邊顏色*/                  
+#nav-bar-customization-target {
+    background: #cccccc !important;
+}
+         
+/*搜尋列、網址列底色*/                   
+.searchbar-textbox, #urlbar{
+    background: #bbbbbb !important; 
+}              
+
+/*網址列選取文字的顏色*/                   
+#searchbar ::-moz-selection, #urlbar ::-moz-selection{
+color: #fff!important;  background: #333!important;
+}
+                   
+                
+/*書籤工具列*/
+#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(:-moz-lwtheme) {
+    background-color: #aaaaaa !important;
+    /*background-color: red !important;*/
+}
+
+/*未選擇tab的顏色*/               
+#TabsToolbar .tabbrowser-tab:not([selected]) {
+background-color:#202020  !important;
+color: #cccccc!important; 
+}
+         
+#TabsToolbar .tabbrowser-tab:hover:not([selected]){
+/*background-color:#992020;
+border-radius: 20px 20px 0 0;
+height: 30px; */ 
+color: #000000!important; 
+}
+
+/*目前tab的顏色*/
+/*字重*/
+#TabsToolbar .tabbrowser-tab[selected] {
+    font-weight: 600 !important;
+}
+
+
+/*tab背景顏色*/              
+.tab-background .tab-background-start[selected=true]::before, .tab-background  .tab-background-end[selected=true]::before{
+    background:#cccccc !important;
+}               
+.tab-background-middle[selected=true]{
+    background:#cccccc !important;
+    background-clip: content-box!important;
+}
+.tab-background-start[selected=true]::before{
+    clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start)!important;
+}
+.tab-background-end[selected=true]::before{
+    clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end)!important;
+}                   
+
+/*開新分頁的icon圖示*/
+.tabs-newtab-button,
+#TabsToolbar > #new-tab-button ,
+#TabsToolbar > toolbarpaletteitem > #new-tab-button {
+  color: white!important;
+}
+
+/*分頁上close button的圖示*/
+.tab-close-button:not([selected]) {
+     list-style-image: url("chrome://global/skin/icons/close-inverted@2x.png") !important;
+}
+/*分頁塞滿後左右箭頭的圖示*/                   
+.tabbrowser-arrowscrollbox > .scrollbutton-up, .tabbrowser-arrowscrollbox > .scrollbutton-down {
+  list-style-image: url(chrome://browser/skin/tabbrowser/tab-arrow-left-inverted.svg) !important;
+}
+
+/*閱讀模式button*/                   
+#reader-mode-button {
+  list-style-image: url("chrome://browser/skin/readerMode.svg");
+  -moz-image-region: rect(0, 16px, 16px, 0);
+  background-color:darkblue !important;
+}
+
+.urlbar-history-dropmarker:hover {
+  -moz-image-region: var(--urlbar-dropmarker-2x-region) !important;
+}      
+
+.urlbar-history-dropmarker[open="true"], .urlbar-history-dropmarker:hover:active {
+  -moz-image-region: var(--urlbar-dropmarker-active-2x-region) !important;
+}                                     
+
+ 
+                   
+/* menu bar color */
+#main-menubar, #toolbar-menubar, #menubar-items, menubar > menu {
+    background: #202020 !important;
+    color: white !important;
+    text-shadow: none !important;
+}                       
+
+/*
+
+
+/* 增加find bar的文字 Previous and Next buttons */
+.findbar-find-previous label:after { content: "Prev"; }
+.findbar-find-next label:after { content: "Next"; }
+
+/* move spacer to a position behind the Match case button */
+/*.findbar-container>spacer { -moz-box-ordinal-group:2 !important; }*/
+
+/* close button at far left */
+/*.findbar-container>.findbar-closebutton { -moz-box-ordinal-group: 0 !important; margin-right:10px !important; }*/
+
+/* close button at far right */
+/*.findbar-container>.findbar-closebutton { -moz-box-ordinal-group:3 !important; }*/
+
+
+/*menu, menuitem, menupopup
+{ background-color: RGB(192,192,192) !important;}*/
+                   
+/*popup menu, popup menuitem, menupopup, menupopup menu, menupopup menuitem
+{ background-color: RGB(192,192,192) !important;}
+
+contex-menu, popup menu, popup menuitem menuseparator, menupopup menu, menupopup menuitem menuseparator
+{ font-weight: normal !important;
+color: #000 !important;
+border: none !important;}
+*/

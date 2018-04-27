@@ -1,0 +1,141 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/*選單界面顏色*/
+:root:-moz-lwtheme-brighttext{
+	--chrome-secondary-background-color: hsl(240, 1%, 35%) !important }
+
+/*移除網址列上的zoom indicator*/
+#urlbar-zoom-button {display:none!important}
+
+/*改address bar的下拉清單字體*/                 
+/* Suggestion Page Title */
+.autocomplete-richlistitem .ac-title{
+	font-size: 20px !important; /* default is 14px */
+}
+/* Suggestion Page URL */
+.autocomplete-richlistitem .ac-url{
+	font-size: 20px !important; /* default is 12px */
+}
+
+/*搜尋列、網址列底色*/                   
+/*.searchbar-textbox, #urlbar{
+    background: #bbbbbb !important;
+	color: black!important;
+}*/
+/*
+.autocomplete-richlistitem{
+  background-color: #cccccc !important;
+}*/
+
+
+/*目前tab的字重*/
+#TabsToolbar .tabbrowser-tab[selected] {
+	/*font-weight: 600 !important;*/
+	text-shadow: 2px 2px 1.5px black !important;
+	color: white !important;
+}
+
+/*書籤列的字*/
+/*#PlacesToolbarItems .bookmark-item {
+	text-shadow: 1px 1px 1.5px black !important;
+}*/
+/*閱讀模式button*/                   
+#reader-mode-button {
+  background-color:dodgerblue !important;
+}
+
+/*bookmark選單*/
+.panel-arrowcontent {background: #dddddd !important;}
+
+/*歷史選單*/
+photonpanelmultiview panelview {background: #dddddd !important;}
+/*選單中次選單的顏色,改這個不知是否會影響很多顏色*/
+:root {
+   --arrowpanel-background: #dddddd !important;}
+
+/*書籤選單中次選單的顏色  改上面那個--arrowpanel-background就可以了*/
+/*#BMB_bookmarksPopup menupopup[placespopup="true"] > hbox {
+    background: yellow !important;
+}*/
+
+/*上一頁按鍵顏色*/
+#back-button[disabled] > .toolbarbutton-icon {
+  background-color: transparent !important;/*不要有底色*/
+}
+#back-button:not([disabled]):not([open]) > .toolbarbutton-icon,
+#back-button:not([disabled]):not([open]):hover > .toolbarbutton-icon,
+#back-button[open] > .toolbarbutton-icon,
+#back-button:not([disabled]):hover:active > .toolbarbutton-icon {
+fill: #ff6600 !important;/*橘色*/
+}
+/*下一頁按鍵顏色*/
+#forward-button:not([disabled]):not([open]) > .toolbarbutton-icon,
+#forward-button:not([disabled]):not([open]):hover > .toolbarbutton-icon,
+#forward-button[open] > .toolbarbutton-icon,
+#forward-button:not([disabled]):hover:active > .toolbarbutton-icon {
+fill: #ff6600 !important;/*橘色*/
+}
+
+.tabs-newtab-button{fill: #ff6600 !important;/*橘色*/}
+
+/*分頁上close button的圖示底色*/
+.close-icon:hover {fill-opacity: 0.3 !important;}
+/*分頁上close button的圖示底色*/
+.close-icon:active {fill-opacity: 0.5 !important;}
+
+/* 增加find bar的文字 Previous and Next buttons */
+/*.findbar-find-previous label:after { content: "Prev"; }
+.findbar-find-next label:after { content: "Next"; }*/
+
+
+.findbar-find-previous, .findbar-find-next {
+    background: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,0)) !important;
+	padding: 1px 25px !important;
+}
+ 
+.findbar-container toolbarbutton[checked="true"]:not([disabled="true"]) {
+	background-color: #000000 !important;
+	box-shadow: inset 0px 0px 0px 1px white!important;
+}
+
+
+/*停用bookmark動畫,參考https://userstyles.org/styles/99666/disable-arrow-panel-animations-v3*/
+#BMB_bookmarksPopup {
+  transform: none !important;
+  transition-duration: 1ms !important;
+}
+            
+/*停用menu動畫*/                   
+panel[type="arrow"]:not([animate="false"]) {
+  transform: none !important;
+  transition-duration: 1ms !important;
+}
+
+/*書籤資料夾圖示*/
+.bookmark-item[container] {
+  list-style-image: url("chrome://global/skin/icons/folder-item.png") !important;
+  -moz-image-region: rect(0px, 32px, 16px, 16px) !important;
+}
+
+/*RSS資料夾圖示*/
+.bookmark-item[container][livemark] {
+  list-style-image: url("file:///E:/livemark-folder.png")!important;
+  -moz-image-region: auto !important;
+}
+
+/*分頁關閉按鈕永遠存在*/
+.tab-close-button:not([pinned="true"]) { display: -moz-box !important;}
+
+/*附加元件圖示底色*/
+#ublock0_raymondhill_net-browser-action .toolbarbutton-badge,
+#support_lastpass_com-browser-action .toolbarbutton-badge,
+#xstyle-amo_addon_firefoxcn_net-browser-action .toolbarbutton-badge{
+	background-color: rgb(238, 49, 49) !important;
+}context_sendTabToDevice
+/*隱藏分頁右鍵選單之關閉分頁、移動到新視窗、將分頁傳送至裝置、分頁靜音、關閉右方分頁、關閉其他分頁、*/
+#context_closeTab, #context_openTabInWindow, #context_sendTabToDevice, #context_toggleMuteTab,
+#context_closeTabsToTheEnd, #context_closeOtherTabs, #context_sendTabToDevice_separator,
+#context_toggleMuteTab + menuseparator, #context_closeTab{
+display:none !important;}
+
+
