@@ -1,5 +1,11 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
+/*改所有字型大小*/
+*:not(.toolbarbutton-badge){
+	font-size: 17px !important;
+	}
+
+
 /*選單界面顏色*/
 :root:-moz-lwtheme-brighttext{
 	--chrome-secondary-background-color: hsl(240, 1%, 35%) !important }
